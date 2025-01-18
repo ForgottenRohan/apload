@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
+from aiogram.enums.parse_mode import ParseMode
 import asyncio
 from config import (
     TOKEN,
@@ -38,8 +39,9 @@ async def start(message: types.Message):
 async def instr(callback: types.CallbackQuery):
     await bot.send_message(
         chat_id=callback.from_user.id,
-        text="Instruction text",
+        text="[Instruction text](https://t.me/woeofficial)",
         reply_markup=AFTER_INSTRUCTION_KEYBOARD,
+        parse_mode=ParseMode.MARKDOWN,
     )
 
 
