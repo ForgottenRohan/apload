@@ -16,19 +16,17 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
-    global start_message_id
-
     user_status = await bot.get_chat_member(
         chat_id=CHANNEL_ID, user_id=message.from_user.id
     )
     if user_status.status != "left":
-        start_message_id = await bot.send_message(
+        await bot.send_message(
             chat_id=message.from_user.id,
             text="thx for subscribe, use bot",
             reply_markup=MAIN_KEYBOARD,
         )
     else:
-        start_message_id = await bot.send_message(
+        await bot.send_message(
             chat_id=message.from_user.id,
             text="Subscribe to channel, for use bot",
             reply_markup=START_KEYBOARD,
