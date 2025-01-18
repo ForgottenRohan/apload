@@ -8,12 +8,14 @@ CHANNEL_ID = "@gxdlikee"
 MAIN_KEYBOARD = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Инструкция", callback_data="instruction")],
+        [InlineKeyboardButton(text="Зарегистрироваться", callback_data="reg")],
         [
             InlineKeyboardButton(
                 text="СИГНАЛ!",
                 web_app=WebAppInfo(url="https://bebra.work.gd"),
             )
         ],
+        [InlineKeyboardButton(text="Вернуться", callback_data="check_subscribe")],
     ]
 )
 AFTER_INSTRUCTION_KEYBOARD = InlineKeyboardMarkup(
@@ -22,7 +24,8 @@ AFTER_INSTRUCTION_KEYBOARD = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text="СИГНАЛ", web_app=WebAppInfo(url="https://bebra.work.gd")
             )
-        ]
+        ],
+        [InlineKeyboardButton(text="Вернуться", callback_data="check_subscribe")],
     ]
 )
 START_KEYBOARD = InlineKeyboardMarkup(

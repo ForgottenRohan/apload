@@ -35,6 +35,15 @@ async def start(message: types.Message):
         )
 
 
+@dp.callback_query(F.data == "reg")
+async def reg(callback: types.CallbackQuery):
+    await bot.send_message(
+        chat_id=callback.from_user.id,
+        text="Registration text",
+        reply_markup=AFTER_INSTRUCTION_KEYBOARD,
+    )
+
+
 @dp.callback_query(F.data == "instruction")
 async def instr(callback: types.CallbackQuery):
     await bot.send_message(
