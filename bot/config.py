@@ -3,7 +3,7 @@ from aiogram.types.inline_keyboard_markup import InlineKeyboardMarkup
 
 from aiogram.types import WebAppInfo
 
-TOKEN = "7394950836:AAFgZ_0WE95jml8JogBRIcvR3GCGw999DTI"
+TOKEN = "7771154906:AAGOZnoze9DPFS8ddGQ71r0dAkuBqqQzqdI"
 CHANNEL_ID = "@gxdlikee"
 MAIN_KEYBOARD = InlineKeyboardMarkup(
     inline_keyboard=[
