@@ -24,7 +24,8 @@ const App = () => {
         try {
           setButtonClicked(true);
           await delay(2000)
-            const response = await axios.get('http://localhost:80/api');
+            
+            const response = await axios.get('https://apibebra.work.gd');
             const indicesToKeep = response.data.data; // Получаем массив [1, 2, 3]
 
             // Заменяем изображения с анимацией

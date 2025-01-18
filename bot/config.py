@@ -10,7 +10,7 @@ MAIN_KEYBOARD = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="СИГНАЛ!",
-                web_app=WebAppInfo(url="https://google.com"),
+                web_app=WebAppInfo(url="https://bebra.work.gd"),
             )
         ],
     ]
