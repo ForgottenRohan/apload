@@ -15,7 +15,6 @@ MAIN_KEYBOARD = InlineKeyboardMarkup(
                 web_app=WebAppInfo(url="https://bebra.work.gd"),
             )
         ],
-        [InlineKeyboardButton(text="Вернуться", callback_data="check_subscribe")],
     ]
 )
 AFTER_INSTRUCTION_KEYBOARD = InlineKeyboardMarkup(
