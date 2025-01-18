@@ -1,7 +1,13 @@
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
 import asyncio
-from config import TOKEN, MAIN_KEYBOARD, START_KEYBOARD, CHANNEL_ID
+from config import (
+    TOKEN,
+    MAIN_KEYBOARD,
+    START_KEYBOARD,
+    CHANNEL_ID,
+    AFTER_INSTRUCTION_KEYBOARD,
+)
 
 bot = Bot(TOKEN)
 dp = Dispatcher()
@@ -26,6 +32,15 @@ async def start(message: types.Message):
             text="Subscribe to channel, for use bot",
             reply_markup=START_KEYBOARD,
         )
+
+
+@dp.callback_query(F.data == "instruction")
+async def instr(callback: types.CallbackQuery):
+    await bot.send_message(
+        chat_id=callback.from_user.id,
+        text="Instruction text",
+        reply_markup=AFTER_INSTRUCTION_KEYBOARD,
+    )
 
 
 @dp.callback_query(F.data == "check_subscribe")
