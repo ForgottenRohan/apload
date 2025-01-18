@@ -14,7 +14,8 @@ services:
       - backend
       - frontend
     networks:
-      - dev
+      - dev 
+    restart: always
     
 
   backend:
@@ -22,12 +23,15 @@ services:
       context: ./backend
     networks:
       - dev
+    restart: always
 
   frontend:
     build:
       context: ./frontend
     networks:
       - dev
+    restart: always
   bot:
     build: 
       context: ./bot
+    restart: always
