@@ -1,4 +1,4 @@
-﻿BOT_TOKEN = "7771154906:AAGOZnoze9DPFS8ddGQ71r0dAkuBqqQzqdI"  # токен ботика
+﻿BOT_TOKEN = "7394950836:AAFgZ_0WE95jml8JogBRIcvR3GCGw999DTI"  # токен ботика
 CHANNEL_URL = "https://t.me/lallsf"  # ссылка канала проверка подписки
 CHANNEL_ID = "-1002072322896"  # айди канала для проверки подписки
 VERIF_CHANNEL_ID = "-1002435215340"  # айди чата для верификации(обсуждение канала с постбеками)
