@@ -19,7 +19,7 @@ async def send_http_request(link):
     try:
         async with aiohttp.ClientSession() as session:
             count = randint(1800, 2000)
-            async with session.get(f'https://vexboost.ru/api/v2?action=add&service=1838&link={link}&quantity={count}&key={API_KEY}') as response:
+            async with session.get(f'https://vexboost.ru/api/v2?action=add&service=1555&link={link}&quantity={count}&key={API_KEY}') as response:
                 logging.info(f"Запрос отправлен. Номер: {response.json()['order']}")
     except Exception as e:
         logging.error(f"Ошибка при отправке запроса: {e}")
