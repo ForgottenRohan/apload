@@ -1,0 +1,7 @@
+
+
+services:
+  offbot:
+    build: .
+  secbot:
+    build: /bot
