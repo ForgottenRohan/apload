@@ -4,4 +4,4 @@ services:
   offbot:
     build: .
   secbot:
-    build: /bot
+    build: ./bot
