@@ -2,6 +2,6 @@
 
 services:
   offbot:
-    build: .
+    build: ./offbot
   secbot:
-    build: ./bot
+    build: ./secbot
