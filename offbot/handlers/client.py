@@ -158,3 +158,7 @@ async def change_referral_message_state(message: types.Message, state: FSMContex
     await message.answer(languages[lang]["ref_changed"])
     await DataBase.edit_ref(message.text)
     await state.clear()
+
+@router.callback_query(F.data == "change_game")
+async def change_game(callback: types.CallbackQuery):
+    await callback.message.answer(text='Change game:', reply_markup=await ClientKeyboard.change_game())

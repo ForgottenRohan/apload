@@ -43,7 +43,7 @@ class ClientKeyboard:
         if user_info[0] != "verifed":
             ikb.button(text=languages[lang]["get_signal"], callback_data="register")
         else:
-            ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://getsignals.run.place/"))
+            ikb.button(text=languages[lang]["get_signal"], callback_data="change_game")
 
         ikb.adjust(2, 1, 1)
         return ikb.as_markup()
@@ -67,8 +67,18 @@ class ClientKeyboard:
     @staticmethod
     async def get_signal_keyboard(lang: str):
         ikb = InlineKeyboardBuilder()
-        ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://getsignals.run.place/"))
+        ikb.button(text=languages[lang]["get_signal"], callback_data="change_game")
         ikb.button(text=languages[lang]["back"], callback_data="back")
         ikb.adjust(1)
         return ikb.as_markup()
+    @staticmethod
+    async def change_game():
+        keyboard = InlineKeyboardBuilder()
+        keyboard.button(text='⭐️MINES⭐️', web_app=types.WebAppInfo(url='https://entypublic.github.io/xdmines/'))
+        keyboard.button(text='🚀LUCKYJET🚀', web_app=types.WebAppInfo(url='https://volneer.github.io/jea/'))
+        keyboard.button(text='✈️AVIATOR✈️', web_app=types.WebAppInfo(url='https://volneer.github.io/avai/'))
+        keyboard.button(text='💣BOMBUCKS💣', web_app=types.WebAppInfo(url='https://volneer.github.io/bb/'))
+        keyboard.button(text='✴ROYAL MINES✴', web_app=types.WebAppInfo(url='https://volneer.github.io/raayl/'))
+        keyboard.adjust(2, 2, 1)
+        return keyboard.as_markup()
 
