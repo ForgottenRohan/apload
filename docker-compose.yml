@@ -23,5 +23,5 @@ services:
       context: ./offbot
   secbot:
     build: 
-    context: ./secbot
+      context: ./secbot
   
