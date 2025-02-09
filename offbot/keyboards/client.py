@@ -67,7 +67,7 @@ class ClientKeyboard:
     @staticmethod
     async def get_signal_keyboard(lang: str):
         ikb = InlineKeyboardBuilder()
-        ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://entypublic.github.io/xdmines/"))
+        ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://getsignals.run.place/"))
         ikb.button(text=languages[lang]["back"], callback_data="back")
         ikb.adjust(1)
         return ikb.as_markup()
