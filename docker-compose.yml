@@ -1,7 +1,23 @@
-
+networks:
+  dev:
 
 services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      -"80:80"
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    depends_on:
+      - signal-site
+    networks:
+      - dev
+  signal-site:
+    build: ./signal-site
+    networks:
+      - dev
   offbot:
     build: ./offbot
   secbot:
     build: ./secbot
+  
