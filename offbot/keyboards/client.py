@@ -43,7 +43,7 @@ class ClientKeyboard:
         if user_info[0] != "verifed":
             ikb.button(text=languages[lang]["get_signal"], callback_data="register")
         else:
-            ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://entypublic.github.io/xdmines/"))
+            ikb.button(text=languages[lang]["get_signal"], web_app=types.WebAppInfo(url="https://getsignals.run.place/"))
 
         ikb.adjust(2, 1, 1)
         return ikb.as_markup()
