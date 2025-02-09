@@ -10,15 +10,18 @@ services:
       - './nginx.conf:/etc/nginx/nginx.conf'
       - '/etc/letsencrypt:/etc/letsencrypt'
     depends_on:
-      - signal-site
+      - signalsite
     networks:
       - dev
-  signal-site:
-    build: ./signal-site
+  signalsite:
+    build: 
+      context: ./signal-site
     networks:
       - dev
   offbot:
-    build: ./offbot
+    build: 
+      context: ./offbot
   secbot:
-    build: ./secbot
+    build: 
+    context: ./secbot
   
